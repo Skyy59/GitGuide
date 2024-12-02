@@ -67,3 +67,8 @@ git stash list
 git log --oneline
 git revert [COMMIT_ID]
 ```
+### 12. Cherry Pick
+```
+git log --oneline
+git cherry-pick [COMMIT_ID]
+```
