@@ -85,3 +85,9 @@ git diff HEAD > <file>
 ```
 git apply <file>
 ```
+### 16. Init Hub
+```
+git remote add origin [REMOTE-URL]
+git push -u origin master
+git push origin --all
+```
