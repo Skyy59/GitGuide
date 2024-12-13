@@ -76,16 +76,28 @@ git cherry-pick [COMMIT_ID]
 ```
 git log --oneline
 git reset --soft HEAD~1
+git reset --mixed <commit>
+git reset --hard <commit>
+git reset --keep <commit>
+git reset --merge <commit>
+git reset <commit>
 ```
 ### 14. Create Patch
 ```
 git diff HEAD > <file>
+git diff <commit_id>^ <commit_id> > my_patch.diff
+
+git format-patch -3
+git format-patch <commit_range> --stdout > my_patch.diff
+
+git cherry-pick <commit_id>
+git diff HEAD^ > my_patch.diff
 ```
 ### 15. Apply Patch
 ```
 git apply <file>
 ```
-### 16. Init Hub
+### 16. Init GitHub
 ```
 git remote add origin [REMOTE-URL]
 git push -u origin master
